@@ -1,7 +1,10 @@
 package org.example;
 
+import org.junit.Test;
+
 public class HelloPrint {
-    public static void main(String[] args)
+    @Test
+    public void test()
     {
         System.out.println("Hello World");
     }
