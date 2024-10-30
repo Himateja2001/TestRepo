@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,12 +12,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest {
-    WebDriver driver;
+    public static WebDriver driver=null;
+
+    @BeforeAll
+    public void before_all(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+    }
     @Test
     @Given("User is on login page")
     public void userIsOnLoginPage() {
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
         driver.get("https://www.saucedemo.com/v1/");
     }
     @Test
