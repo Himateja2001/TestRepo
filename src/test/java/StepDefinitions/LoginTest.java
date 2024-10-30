@@ -12,9 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest {
-    public static WebDriver driver=null;
+    public static WebDriver driver;
 
-    @Test
     @BeforeAll
     public static void before_all(){
         WebDriverManager.chromedriver().setup();
