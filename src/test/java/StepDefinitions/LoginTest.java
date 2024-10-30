@@ -16,7 +16,8 @@ public class LoginTest {
 
     @BeforeAll
     public static void before_all(){
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver","D:\\Downloads\\chrome-win64\\chrome-win64\\chromedriver.exe");
         driver=new ChromeDriver();
     }
 //    @Test
