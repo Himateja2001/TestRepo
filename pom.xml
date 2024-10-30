@@ -83,7 +83,7 @@
         <version>2.22.2</version>
         <configuration>
           <includes>
-            <include>**/LoginTest.java</include> <!-- Ensure this matches your runner -->
+            <include>**/TestRunner.java</include> <!-- Ensure this matches your runner -->
           </includes>
         </configuration>
       </plugin>
