@@ -7,15 +7,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class LoginTest {
     WebDriver driver;
+    @Test
     @Given("User is on login page")
     public void userIsOnLoginPage() {
         driver= new ChromeDriver();
         driver.get("https://www.saucedemo.com/v1/");
     }
-
+    @Test
     @When("user enters valid credentials")
     public void userEntersValidCredentials() {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
@@ -23,7 +25,7 @@ public class LoginTest {
         driver.findElement(By.id("login-button")).click();
     }
 
-
+    @Test
     @Then("user should be navigated to Home page successfully")
     public void userShouldBeNavigatedToHomePageSuccessfully() {
         String title= driver.getTitle();
