@@ -15,7 +15,7 @@ public class LoginTest {
     public static WebDriver driver=null;
 
     @BeforeAll
-    public void before_all(){
+    public static void before_all(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
     }
